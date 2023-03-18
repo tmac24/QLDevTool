@@ -7,6 +7,7 @@
 //
 
 #import "QLViewController.h"
+#import "QLTool.h"
 
 @interface QLViewController ()
 
@@ -24,6 +25,11 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    QLTool *networking = QLTool.new;
+    NSLog(@"%@",networking.getSomething);
 }
 
 @end
